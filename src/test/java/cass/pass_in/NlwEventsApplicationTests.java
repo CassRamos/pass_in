@@ -1,4 +1,4 @@
-package cass.nlw_events;
+package cass.pass_in;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
