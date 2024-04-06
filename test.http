@@ -1,0 +1,18 @@
+### CREATE EVENT
+POST http://localhost:8080/events
+Content-Type: application/json
+
+{
+  "title": "Pipipi Popopo",
+  "details": "Santos campeao",
+  "maximumAttendees": 40000
+}
+
+
+### GET EVENT
+GET http://localhost:8080/events/533ba5bb-5f20-4f9e-9e4c-5af22df5045c
+Content-Type: application/json
+
+### GET  EVENT ATTENDEES
+GET http://localhost:8080/events/attendees/533ba5bb-5f20-4f9e-9e4c-5af22df5045c
+Content-Type: application/json
