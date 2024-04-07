@@ -1,4 +1,4 @@
-package cass.pass_in.Config;
+package cass.pass_in.config;
 
 import cass.pass_in.domain.event.exceptions.EventNotFoundException;
 import org.springframework.http.ResponseEntity;
