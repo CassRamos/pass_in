@@ -8,7 +8,6 @@ Content-Type: application/json
   "maximumAttendees": 40000
 }
 
-
 ### GET EVENT
 GET http://localhost:8080/events/148330e8-0cd3-4ffa-b562-c2e4f69835f8
 Content-Type: application/json
@@ -23,9 +22,13 @@ Content-Type: application/json
 
 {
   "name": "Cassiru",
-  "email": "test@gmail.com"
+  "email": "Cassiru@gmail.com"
 }
 
 ### GET BADGE
-GET http://localhost:8080/attendees/74b8ee7e-80aa-4907-9e20-380cbb3bddd9/badge
+GET http://localhost:8080/attendees/f72af053-60cf-4242-895d-b146c2db086e/badge
+Content-Type: application/json
+
+### CHECK IN
+POST http://localhost:8080/attendees/f72af053-60cf-4242-895d-b146c2db086e/check-in
 Content-Type: application/json
