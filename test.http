@@ -3,9 +3,9 @@ POST http://localhost:8080/events
 Content-Type: application/json
 
 {
-  "title": "Campeonato Paulista 2024",
-  "details": "Santos Campeão",
-  "maximumAttendees": 40000
+  "title": "Something",
+  "details": "pipipipopoo",
+  "maximumAttendees": 1
 }
 
 ### GET EVENT
@@ -17,7 +17,7 @@ GET http://localhost:8080/events/attendees/148330e8-0cd3-4ffa-b562-c2e4f69835f8
 Content-Type: application/json
 
 ### REGISTER PARTICIPANT
-POST http://localhost:8080/events/148330e8-0cd3-4ffa-b562-c2e4f69835f8/attendees
+POST http://localhost:8080/events/9e354b0c-8758-4816-9cbd-857714120aeb/attendees
 Content-Type: application/json
 
 {
