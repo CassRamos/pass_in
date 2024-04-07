@@ -1,5 +1,7 @@
 package cass.pass_in.controllers;
 
+import cass.pass_in.dto.attendee.AttendeeIdDTO;
+import cass.pass_in.dto.attendee.AttendeeRequestDTO;
 import cass.pass_in.dto.attendee.AttendeesListResponseDTO;
 import cass.pass_in.dto.event.EventIdDTO;
 import cass.pass_in.dto.event.EventRequestDTO;
@@ -29,11 +31,23 @@ public class EventController {
     public ResponseEntity<EventIdDTO> createEvent(@RequestBody EventRequestDTO body, UriComponentsBuilder uriComponentsBuilder) {
         EventIdDTO eventIdDTO = this.eventService.createEvent(body);
 
-
         //build URI using DTO
         var uri = uriComponentsBuilder.path("/events/{id}").buildAndExpand(eventIdDTO.eventId()).toUri();
 
         return ResponseEntity.created(uri).body(eventIdDTO);
+    }
+
+    @PostMapping("/{eventId}/attendees")
+    public ResponseEntity<AttendeeIdDTO> registerParticipant(@PathVariable String eventId,
+                                                             @RequestBody AttendeeRequestDTO body,
+                                                             UriComponentsBuilder uriComponentsBuilder) {
+
+        AttendeeIdDTO attendeeIdDTO = this.eventService.registerAttendeeOnEvent(eventId, body);
+
+        //build URI using DTO
+        var uri = uriComponentsBuilder.path("/attendees/{attendeeId}/badge").buildAndExpand(attendeeIdDTO.attendeeId()).toUri();
+
+        return ResponseEntity.created(uri).body(attendeeIdDTO);
     }
 
     @GetMapping("/attendees/{id}")
