@@ -15,7 +15,7 @@
   This application is built using Spring Boot to develop a robust and scalable API. Additionally, Flyway is integrated to manage database migrations, ensuring a seamless and reliable process for versioning and maintaining the database schema.
   
   - Java & Spring Boot
-  - Fliway (migrations)
+  - Flyway (migrations)
   - HSQLDB
   - Git & Github 
   
